@@ -58,3 +58,8 @@ sc = StandardScaler()
 #because if it is appllied, then we get nonsense range of scaled values (in this case b/w -3 to =3 coz standardisation)
 #and we will lose the interpretability of the model, it won't be identifiable to which category they represent to
 x_train[:, 3:] = sc.fit_transform(x_train[:, 3:])
+x_test[:, 3:] = sc.transform(x_test[:, 3:])
+# print(x_train)
+# print("\n")
+# print(x_test)
+
